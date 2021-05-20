@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao JavaScript</title>
+</head>
+<body>
+    <script>
+       var nome
+       var anoN, anoA, idade, sexo
+
+       nome = prompt("Informe seu nome:")
+       anoN = prompt("Informe o ano de nascimento:")
+       anoA =  prompt("Informe o ano atual:")
+       sexo = prompt("Informe o seu sexo - F (feminino) ou M (Masculino)")
+
+       idade = anoA - anoN
+
+       if(sexo=="F"){
+       document.write("Sra."+nome+" sua idade é "+idade + " anos, você nasceu no ano de  "+anoN)
+       }else{
+        document.write("Sr."+nome+" sua idade é "+idade + " anos, você nasceu no ano de  "+anoN)    
+       }
+
+    if(idade >= 18 && sexo == "F"){
+        document.write("<br>"+
+        "<p style='font-family:courier new; font-size:40pt;text-align:center; color:pink' >Sra. você é madura!</p>")
+    }else if(idade >= 18 && sexo == "M"){
+        document.write("<br>Sr. "+nome+", você é xiruzão véio")
+    }else if(idade < 18 && sexo == "F"){
+        document.write("<br>Srta. "+nome+", você é uma xiruzita novinha")
+    } else {
+        document.write("<br>Muleque "+nome+", você é um xiruzinho Nutella")
+    }  
+    </script>
+</body>
+</html>
