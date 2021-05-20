@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-       var nome
+       /*var nome
        var anoN, anoA, idade, sexo
 
        nome = prompt("Informe seu nome:")
@@ -33,7 +33,22 @@
         document.write("<br>Srta. "+nome+", você é uma xiruzita novinha")
     } else {
         document.write("<br>Muleque "+nome+", você é um xiruzinho Nutella")
-    }  
-    </script>
+    }  */
+    var res , produto, itens, quantidade, valor, total,vt = 0;
+    res = "<br>";
+    itens = prompt("Quantos itens?")
+    for(cont=1; cont<=itens;cont++){
+        produto = prompt("Produto");
+        quantidade = prompt("Quantidade:");
+        valor = prompt("Valor unitário");
+        total = quantidade * valor;
+        res = res + produto +" - "+quantidade +" R$"+valor.fixed(2) +" = R$"+total.toFixed(2)+"<br>";
+        vt=vt+total;
+    }
+    document.write("N O T A   F I S C A L <br><br> ========================== <br> ");
+    document.write(res);
+    document.write("==========================");
+    document.write("<br>Total da nota é R$"+vt.toFixed(2))
+</script>
 </body>
 </html>
